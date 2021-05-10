@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.mavenproject1.service.NhanVienTester
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.43 s <<< FAILURE! - in com.mycompany.mavenproject1.service.NhanVienTester
+testAddEmployeeFailed{String, String, String, int}[1]  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because the return value of "com.mycompany.mavenproject1.pojo.NhanVien.getTaiKhoan()" is null
+	at com.mycompany.mavenproject/com.mycompany.mavenproject1.service.NhanVienTester.testAddEmployeeFailed(NhanVienTester.java:149)
+
+testAddEmployeeFailed{String, String, String, int}[2]  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because the return value of "com.mycompany.mavenproject1.pojo.NhanVien.getTaiKhoan()" is null
+	at com.mycompany.mavenproject/com.mycompany.mavenproject1.service.NhanVienTester.testAddEmployeeFailed(NhanVienTester.java:149)
+

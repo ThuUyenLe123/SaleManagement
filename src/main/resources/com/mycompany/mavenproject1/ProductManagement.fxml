@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane stylesheets="@homeManagement.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject1.ProductManagementController">
+   <children>
+      <AnchorPane layoutY="211.0" prefHeight="50.0" AnchorPane.bottomAnchor="400.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btnAddProduct" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="30.0" prefWidth="100.0" text="Add" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+            <Button fx:id="btnUpdateProduct" disable="true" layoutX="124.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Update" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="124.0" />
+            <Button fx:id="btnDeleteProduct" disable="true" layoutX="231.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Delete" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="231.0" />
+            <Button fx:id="btnRsInputProduct" layoutX="343.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Reset" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="343.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </AnchorPane>
+      <GridPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="800.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="195.59998168945313" minHeight="10.0" prefHeight="52.400000000000006" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="355.6000122070312" minHeight="10.0" prefHeight="348.4" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="tbProduct" prefHeight="200.0" prefWidth="800.0" GridPane.rowIndex="1">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="btnSeachHH" mnemonicParsing="false" text="Seach">
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </padding>
+            </Button>
+            <TextField fx:id="kwSeachh" promptText="Nhập Tên Hàng Cần Tìm...">
+               <GridPane.margin>
+                  <Insets left="100.0" right="400.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+            </TextField>
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" AnchorPane.bottomAnchor="510.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.1999877929687" minWidth="10.0" prefWidth="318.4" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.1999877929687" minWidth="10.0" prefWidth="165.60001220703123" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.40002059936523" minWidth="10.0" prefWidth="136.79998779296875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.40002059936523" minWidth="10.0" prefWidth="180.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Tên Hàng Hóa">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label text="Giá Bán" GridPane.rowIndex="2" />
+            <Label text="Số Lượng" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbLoaiHang" prefWidth="150.0" promptText="Loại Hàng" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="cbXuatXu" prefWidth="150.0" promptText="Xuất Xứ" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <TextField fx:id="txtHangHoa" prefHeight="26.0" prefWidth="151.0">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtGiaBan" prefHeight="26.0" prefWidth="151.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtSoLuong" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Đơn Vị" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Ngày Sản Xuất" GridPane.rowIndex="4" />
+            <Label text="Hạn Sử Dụng" GridPane.rowIndex="5" />
+            <DatePicker fx:id="txtNgaySanXuat" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <DatePicker fx:id="txtHanSuDung" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <TextField fx:id="txtDonVi" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="80.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="rsDateSX" mnemonicParsing="false" text="Reset Date" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="rsDateHSD" mnemonicParsing="false" text="Reset Date" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Giá Nhập Hàng" GridPane.rowIndex="1" />
+            <TextField fx:id="txtGiaNhapHang" prefHeight="26.0" prefWidth="151.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

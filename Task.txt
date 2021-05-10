@@ -1,0 +1,18 @@
+- Xong Data (complete)
+- Code Giao Diện
++ Đăng Nhập
++ Đăng Kí Nhân Viên Làm Việc
++ Quản Lý Nhân Viên
++ Quản Lý Hàng Hóa
++ Bán Hàng
++ Thống Kê Báo Cáo
++ Nhập Hàng
++ Xuất Hàng
++ In Hóa Đơn
++ Kiểm Tra Hàng Hóa
++ Tra Cứu Thông Tin Khách Hàng
++ Đăng Kí Khách Hàng Thân Thiết
++ Tra Cứu Sản Phẩm
++ Thay Đổi Thông Tin Khách Hàng
++ Thay Đổi Thông Tin Hàng Hóa
++ Thay Đổi Thông Tin Nhân Viên
